@@ -31,7 +31,9 @@ public class Instrumentor {
                                 ProtectionDomain protectionDomain, byte[] classfileBuffer) {
             System.out.println("Instrumenting:" + className);
             ClassReader cr = new ClassReader(classfileBuffer);
-            ClassWriter cw = new ClassWriter();
+            ClassWriter cw = new ClassWriter(cr, ClassWriter.COMPUTE_FRAMES);
+            classfileBuffer = cw.toByteArray();
+            return classfileBuffer;
         }
     }
 }
