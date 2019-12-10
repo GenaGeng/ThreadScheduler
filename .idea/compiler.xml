@@ -9,5 +9,8 @@
         <module name="ThreadScheduler" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ThreadScheduler" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
