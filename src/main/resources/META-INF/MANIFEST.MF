@@ -1,4 +1,4 @@
-Manifest-Version: fest-Version: 1.0
-Can-Redefine-Classes: True
-Can-Retransform-Classes: True
-Premain-Class: instrumentation.Instrumentor
+Manifest-Version: 1.0
+Premain-Class: instrument.Instrumentor
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true

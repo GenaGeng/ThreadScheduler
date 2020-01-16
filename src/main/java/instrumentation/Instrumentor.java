@@ -14,7 +14,7 @@ import java.security.ProtectionDomain;
  * @date 2019/12/5 0005
  */
 public class Instrumentor {
-    public static String EVENT="";
+    public static String EVENT="scheduler.aser/reex/Scheduler";
 
     /**
      * premain()方法是在main方法之前执行的方法

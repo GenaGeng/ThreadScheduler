@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ThreadScheduler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ThreadScheduler_jar</output-path>
+    <root id="archive" name="ThreadScheduler.jar">
+      <element id="module-output" name="ThreadScheduler" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/w3c/jigsaw/jigsaw/2.2.6/jigsaw-2.2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.69/jcommander-1.69.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/asm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/imunit.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
