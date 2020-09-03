@@ -1,9 +1,9 @@
-package ins;
+package instrumentor;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import test.account.Account;
-import test.operation.Ope;
+import test.account.AccountTest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,7 +17,7 @@ public class Instrumentor {
 
     public static void main(String[] args) throws Exception{
 
-        String className = Account.class.getName();
+        String className = AccountTest.class.getName();
         System.out.println("instrumenting " + className);
 
         ClassReader cr = new ClassReader(className);
@@ -25,13 +25,13 @@ public class Instrumentor {
 
         ClassWriter cw = new ClassWriter(cr,ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
 
-        ClassAdapter ct = new ClassAdapter(cw);
+        MyClassAdapter ct = new MyClassAdapter(cw);
 
         //ClassReader.SKIP_DEBUG表示不遍历调试内容，跳过调试信息（ClassVisitSource,MethodVisitor.visitLocalVariable,MethodVisitor.visitLineNumber不会被解析和访问）
         cr.accept(ct, ClassReader.SKIP_DEBUG);
 
         byte[] data = cw.toByteArray();
-        System.out.println(data);
+//        System.out.println(data);
 
         File file = new File("F:\\myproject\\workplace\\ThreadScheduler\\target\\classes\\" + className.replaceAll("\\.", "/") + ".class");
         System.out.println(file);

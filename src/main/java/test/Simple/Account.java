@@ -1,5 +1,4 @@
-package test.account;
-
+package test.Simple;
 
 /**
  * @author Gena

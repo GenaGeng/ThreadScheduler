@@ -28,7 +28,8 @@ public class ClassAdapter extends ClassVisitor {
 
         if (mv != null){
             //对于operation方法
-            if (s.equals("operation")){
+            if (s.equals("<init>") && s1.equals("Ltest/account/Account;")){
+                System.out.println("进入account第二个构造函数");
                 //使用自定义的MethodVisitor方法，实际改写方法内容
                 warappendMv = new MethodAdapter(mv);
             }
